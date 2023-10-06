@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/currency"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Convert Currency: USD to BDT"/>
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="310dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp"
+            android:hint="Enter USD amount: $"/>
+
+       <androidx.appcompat.widget.AppCompatButton
+           android:layout_width="120dp"
+           android:layout_height="48dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginLeft="140dp"
+           android:text="Convert"
+           android:onClick="convertToBDT"/>
+
+        <TextView
+            android:id="@+id/showAmount"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="$ to ৳"/>
+
+    </LinearLayout>
+
+</LinearLayout>
