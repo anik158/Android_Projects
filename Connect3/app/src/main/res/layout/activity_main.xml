@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:backgroundTint="#871E1E"
+       android:text="Play Again"
+       android:textAllCaps="false"
+       android:onClick="reset"
+       app:layout_constraintBottom_toTopOf="@+id/txt1"
+       app:layout_constraintEnd_toEndOf="@+id/txt1"
+       app:layout_constraintStart_toStartOf="@+id/txt1" />
+
+
+   <TextView
+       android:id="@+id/txt1"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Yellow's Play"
+       app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+       app:layout_constraintEnd_toEndOf="@+id/gridLayout"
+       app:layout_constraintStart_toStartOf="@+id/gridLayout"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <GridLayout
+       android:id="@+id/gridLayout"
+       android:layout_width="310dp"
+       android:layout_height="310dp"
+       android:layout_marginBottom="16dp"
+       android:layout_marginEnd="8dp"
+       android:layout_marginStart="8dp"
+       android:layout_marginTop="16dp"
+       android:background="@drawable/board"
+       android:columnCount="3"
+       android:padding="5dp"
+       android:rowCount="3"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+          android:id="@+id/box_1"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:onClick="putIn"
+          android:tag="0" />
+
+      <ImageView
+          android:id="@+id/box_2"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginLeft="14dp"
+          android:onClick="putIn"
+          android:tag="1" />
+
+      <ImageView
+          android:id="@+id/box_3"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginLeft="15dp"
+          android:onClick="putIn"
+          android:tag="2" />
+
+
+      <ImageView
+          android:id="@+id/box_4"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginTop="13dp"
+          android:onClick="putIn"
+          android:tag="3" />
+
+      <ImageView
+          android:id="@+id/box_5"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginTop="13dp"
+          android:onClick="putIn"
+          android:tag="4" />
+
+      <ImageView
+          android:id="@+id/box_6"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginLeft="12dp"
+          android:layout_marginTop="13dp"
+          android:onClick="putIn"
+          android:tag="5" />
+
+      <ImageView
+          android:id="@+id/box_7"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginTop="18dp"
+          android:onClick="putIn"
+          android:tag="6" />
+
+      <ImageView
+          android:id="@+id/box_8"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginTop="16dp"
+          android:onClick="putIn"
+          android:tag="7" />
+
+      <ImageView
+          android:id="@+id/box_9"
+          android:layout_width="90dp"
+          android:layout_height="90dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginTop="16dp"
+          android:onClick="putIn"
+          android:tag="8" />
+
+
+   </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
