@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Man Power Supply</string>
+    <string name="salary_range">Salary: %1$s - %2$s</string>
+</resources>

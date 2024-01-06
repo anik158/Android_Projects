@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/signIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="UPDATE JOB POST"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"/>
+
+        <TextView
+            android:id="@+id/job_title_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/signIn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/job_title_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="job title"
+            app:layout_constraintTop_toBottomOf="@+id/job_title_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/job_description_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Job Description"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/job_title_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/job_description_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:hint="job description"
+            app:layout_constraintTop_toBottomOf="@+id/job_description_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/emp_num_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Employee Needed"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/job_description_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/emp_num_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textMultiLine"
+            android:maxLines="5"
+            android:hint="Total Employee Need"
+            app:layout_constraintTop_toBottomOf="@id/emp_num_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/skill_requirements_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Skill Requirements "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/emp_num_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/showchips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="Click to hide requirements"
+            app:layout_constraintTop_toBottomOf="@id/skill_requirements_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupSkills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:singleSelection="false"
+            app:layout_constraintTop_toBottomOf="@id/showchips"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipCSE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CSE/EEE Engineer"
+                android:clickable="true"
+                android:checkable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMedical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical"
+                android:clickable="true"
+                android:checkable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipConstructionWorker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Construction Worker"
+                android:clickable="true"
+                android:checkable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Management"
+                android:clickable="true"
+                android:checkable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAccounting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Accounting"
+                android:clickable="true"
+                android:checkable="true"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGraduate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graduate"
+                android:clickable="true"
+                android:checkable="true"
+                />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+
+
+        <TextView
+            android:id="@+id/salary_range_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Salary Range"
+            app:layout_constraintTop_toBottomOf="@id/chipGroupSkills"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/min_salary_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="min salary"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@+id/max_salary_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/salary_range_label" />
+
+        <View
+            android:id="@+id/salary_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/dividerVertical"
+            app:layout_constraintTop_toBottomOf="@id/salary_range_label"
+            app:layout_constraintStart_toEndOf="@id/min_salary_input"
+            app:layout_constraintEnd_toStartOf="@id/max_salary_input" />
+
+        <EditText
+            android:id="@+id/max_salary_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="max salary"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/salary_range_label" />
+
+        <TextView
+            android:id="@+id/deadline_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="date"
+            android:text="Deadline"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/min_salary_input"
+             />
+
+        <EditText
+            android:id="@+id/date_picker_actions"
+            android:layout_height="wrap_content"
+            android:hint="pick a date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/deadline_label"
+            app:layout_constraintTop_toBottomOf="@id/max_salary_input"
+            android:layout_width="0dp"/>
+
+        <Button
+            android:id="@+id/update_job_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Update Job"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/date_picker_actions" />
+
+        <Button
+            android:id="@+id/cancel_update_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/date_picker_actions" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

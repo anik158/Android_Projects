@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    >
+
+    <TextView
+        android:id="@+id/wel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Contancts"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/welSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login back into your account"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="#808080"
+        android:layout_below="@id/wel"/>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/welSub"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/frame_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkUserId"
+                android:layout_marginLeft="15dp"
+                android:backgroundTint="#F44336"
+                android:elevation="10dp"
+                android:onClick="exitFromLogin"
+                android:text="Exit" />
+
+
+            <Button
+                android:id="@+id/golog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkUserId"
+                android:layout_marginLeft="110dp"
+                android:layout_toRightOf="@id/exit"
+                android:backgroundTint="#4CAF50"
+                android:elevation="10dp"
+                android:text="Go" />
+
+            <CheckBox
+                android:id="@+id/checkUserId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pwd"
+                android:layout_marginLeft="15dp"
+                android:buttonTint="@color/white"
+                android:text="Remember User ID"
+                android:textColor="@color/white" />
+
+
+            <CheckBox
+                android:id="@+id/checkRememberPwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/checkUserId"
+                android:layout_toRightOf="@id/checkUserId"
+                android:buttonTint="@color/white"
+                android:text="Remember Password"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/user_id"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/camera"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input_border"
+                android:drawableLeft="@drawable/user_id"
+                android:hint="User ID"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white"
+
+                />
+
+            <EditText
+                android:id="@+id/pwd"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@id/user_id"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="5dp"
+                android:inputType="textPassword"
+                android:background="@drawable/input_border"
+                android:drawableLeft="@drawable/lock"
+                android:hint="Password"
+                android:paddingLeft="10dp"
+                android:textColorHint="@color/white"
+
+                />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/camera"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/contacts"
+                app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/dont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account?"
+        android:textColor="@color/black"
+        android:layout_alignStart="@id/wel"
+        android:layout_below="@id/frameLayout"/>
+
+
+    <TextView
+        android:id="@+id/sgnPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:textSize="15sp"
+        android:textColor="#03A9F4"
+        android:textStyle="bold"
+        android:onClick="goToSignup"
+        android:layout_below="@id/frameLayout"
+        android:layout_toRightOf="@id/dont"
+        />
+
+
+</RelativeLayout>
